@@ -19,3 +19,10 @@ Route::get('/', function () {
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+Auth::routes();
+Route::get('auth/facebook', 'FacebookAuthController@redirectToProvider')->name('facebook.login') ;
+Route::get('auth/facebook/callback', 'FacebookAuthController@handleProviderCallback');
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/motel', 'MotelController@index')->name('motel');
