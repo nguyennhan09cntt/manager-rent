@@ -89,14 +89,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <i class="la la-close"></i>
                             </button>
                             <div id="m_header_menu" class="m-header-menu m-aside-header-menu-mobile m-aside-header-menu-mobile--offcanvas  m-header-menu--skin-light m-header-menu--submenu-skin-light m-aside-header-menu-mobile--skin-dark m-aside-header-menu-mobile--submenu-skin-dark "  >
-                            @guest
-                                <ul class="m-menu__nav  m-menu__nav--submenu-arrow ">
-                                <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-                                <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
-                                </ul>
-                            @else
-                               {{ menu('admin')}}
-                            @endguest                                                       
+                            
                             </div>
                             <!-- END: Horizontal Menu -->                               <!-- BEGIN: Topbar -->
                             <div id="m_header_topbar" class="m-topbar  m-stack m-stack--ver m-stack--general">
@@ -532,178 +525,20 @@ License: You must have a valid license purchased only from themeforest(the above
         data-menu-vertical="true"
          data-menu-scrollable="false" data-menu-dropdown-timeout="500"  
         >
-                        <ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
-                            <li class="m-menu__item  m-menu__item--active" aria-haspopup="true" >
-                                <a  href="index.html" class="m-menu__link ">
-                                    <i class="m-menu__link-icon flaticon-line-graph"></i>
-                                    <span class="m-menu__link-title">
-                                        <span class="m-menu__link-wrap">
-                                            <span class="m-menu__link-text">
-                                                Dashboard
-                                            </span>
-                                            <span class="m-menu__link-badge">
-                                                <span class="m-badge m-badge--danger">
-                                                    2
-                                                </span>
-                                            </span>
-                                        </span>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
-                                <a  href="#" class="m-menu__link m-menu__toggle">
-                                    <i class="m-menu__link-icon flaticon-interface-6"></i>
-                                    <span class="m-menu__link-text">
-                                        Timeline
-                                    </span>
-                                    <i class="m-menu__ver-arrow la la-angle-right"></i>
-                                </a>
-                                <div class="m-menu__submenu ">
-                                    <span class="m-menu__arrow"></span>
-                                    <ul class="m-menu__subnav">
-                                        <li class="m-menu__item  m-menu__item--parent" aria-haspopup="true" >
-                                            <span class="m-menu__link">
-                                                <span class="m-menu__link-text">
-                                                    Timeline
-                                                </span>
-                                            </span>
-                                        </li>
-                                        <li class="m-menu__item " aria-haspopup="true" >
-                                            <a  href="components/timeline/timeline-1.html" class="m-menu__link ">
-                                                <i class="m-menu__link-bullet m-menu__link-bullet--dot">
-                                                    <span></span>
-                                                </i>
-                                                <span class="m-menu__link-text">
-                                                    Timeline 1
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li class="m-menu__item " aria-haspopup="true" >
-                                            <a  href="components/timeline/timeline-2.html" class="m-menu__link ">
-                                                <i class="m-menu__link-bullet m-menu__link-bullet--dot">
-                                                    <span></span>
-                                                </i>
-                                                <span class="m-menu__link-text">
-                                                    Timeline 2
-                                                </span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
-                                <a  href="#" class="m-menu__link m-menu__toggle">
-                                    <i class="m-menu__link-icon flaticon-network"></i>
-                                    <span class="m-menu__link-text">
-                                        Widgets
-                                    </span>
-                                    <i class="m-menu__ver-arrow la la-angle-right"></i>
-                                </a>
-                                <div class="m-menu__submenu ">
-                                    <span class="m-menu__arrow"></span>
-                                    <ul class="m-menu__subnav">
-                                        <li class="m-menu__item  m-menu__item--parent" aria-haspopup="true" >
-                                            <span class="m-menu__link">
-                                                <span class="m-menu__link-text">
-                                                    Widgets
-                                                </span>
-                                            </span>
-                                        </li>
-                                        <li class="m-menu__item " aria-haspopup="true" >
-                                            <a  href="components/widgets/general.html" class="m-menu__link ">
-                                                <i class="m-menu__link-bullet m-menu__link-bullet--dot">
-                                                    <span></span>
-                                                </i>
-                                                <span class="m-menu__link-text">
-                                                    General Widgets
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li class="m-menu__item " aria-haspopup="true" >
-                                            <a  href="components/widgets/chart.html" class="m-menu__link ">
-                                                <i class="m-menu__link-bullet m-menu__link-bullet--dot">
-                                                    <span></span>
-                                                </i>
-                                                <span class="m-menu__link-text">
-                                                    Chart Widgets
-                                                </span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
-                                <a  href="#" class="m-menu__link m-menu__toggle">
-                                    <i class="m-menu__link-icon flaticon-calendar"></i>
-                                    <span class="m-menu__link-text">
-                                        Calendar
-                                    </span>
-                                    <i class="m-menu__ver-arrow la la-angle-right"></i>
-                                </a>
-                                <div class="m-menu__submenu ">
-                                    <span class="m-menu__arrow"></span>
-                                    <ul class="m-menu__subnav">
-                                        <li class="m-menu__item  m-menu__item--parent" aria-haspopup="true" >
-                                            <span class="m-menu__link">
-                                                <span class="m-menu__link-text">
-                                                    Calendar
-                                                </span>
-                                            </span>
-                                        </li>
-                                        <li class="m-menu__item " aria-haspopup="true" >
-                                            <a  href="components/calendar/basic.html" class="m-menu__link ">
-                                                <i class="m-menu__link-bullet m-menu__link-bullet--dot">
-                                                    <span></span>
-                                                </i>
-                                                <span class="m-menu__link-text">
-                                                    Basic Calendar
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li class="m-menu__item " aria-haspopup="true" >
-                                            <a  href="components/calendar/list-view.html" class="m-menu__link ">
-                                                <i class="m-menu__link-bullet m-menu__link-bullet--dot">
-                                                    <span></span>
-                                                </i>
-                                                <span class="m-menu__link-text">
-                                                    List Views
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li class="m-menu__item " aria-haspopup="true" >
-                                            <a  href="components/calendar/google.html" class="m-menu__link ">
-                                                <i class="m-menu__link-bullet m-menu__link-bullet--dot">
-                                                    <span></span>
-                                                </i>
-                                                <span class="m-menu__link-text">
-                                                    Google Calendar
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li class="m-menu__item " aria-haspopup="true" >
-                                            <a  href="components/calendar/external-events.html" class="m-menu__link ">
-                                                <i class="m-menu__link-bullet m-menu__link-bullet--dot">
-                                                    <span></span>
-                                                </i>
-                                                <span class="m-menu__link-text">
-                                                    External Events
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li class="m-menu__item " aria-haspopup="true" >
-                                            <a  href="components/calendar/background-events.html" class="m-menu__link ">
-                                                <i class="m-menu__link-bullet m-menu__link-bullet--dot">
-                                                    <span></span>
-                                                </i>
-                                                <span class="m-menu__link-text">
-                                                    Background Events
-                                                </span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>                           
-                        </ul>
+                        
+                        @guest
+                            <ul class="m-menu__nav  m-menu__nav--submenu-arrow ">
+                            <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
+                            <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
+                            </ul>
+                        @else
+                            @if (Auth::user()->hasRole('admin'))
+                                {{ menu('admin', 'layouts.menu')}}
+                            @else
+                                {{ menu('user', 'layouts.menu')}}
+                            @endif
+                           
+                        @endguest
                     </div>
                     <!-- END: Aside Menu -->
                 </div>

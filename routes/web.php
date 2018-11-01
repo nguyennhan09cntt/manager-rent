@@ -25,3 +25,4 @@ Route::get('auth/facebook', 'FacebookAuthController@redirectToProvider')->name('
 Route::get('auth/facebook/callback', 'FacebookAuthController@handleProviderCallback');
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/motel', 'MotelController@index')->name('motel');
